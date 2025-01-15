@@ -1,0 +1,149 @@
+{
+    "status": 1,
+    "api_query": "whois_history",
+    "total_records_found": 3,
+    "whois_records": [
+        {
+            "num": 1,
+            "domain_name": "linegp123.cc",
+            "query_time": "2024-09-03 01:18:09",
+            "create_date": "2023-10-27",
+            "update_date": "2024-08-14",
+            "expiry_date": "2024-10-27",
+            "domain_registrar": {
+                "iana_id": 1923,
+                "registrar_name": "Beijing Lanhai Jiye Technology Co., Ltd",
+                "whois_server": "whois.kh86.cn",
+                "website_url": "http://www.ilanhai.cn",
+                "registrar_status": "Accredited"
+            },
+            "registrant_contact": {
+                "full_name": "Redacted for privacy",
+                "company_name": "Redacted for privacy",
+                "mailing_address": "Redacted for privacy",
+                "city_name": "Redacted for privacy",
+                "state_name": "ILLINOIS",
+                "zip_code": "Redacted for privacy",
+                "country_name": "United States",
+                "country_code": "US",
+                "email_address": "https://rdap.gname.com/extra/contact?type=registrant&domain=LINEGP123.CC",
+                "phone_number": "Redacted for privacy",
+                "fax_number": "Redacted for privacy"
+            },
+            "administrative_contact": {
+                "full_name": "Redacted for privacy",
+                "company_name": "Redacted for privacy",
+                "mailing_address": "Redacted for privacy",
+                "city_name": "Redacted for privacy",
+                "state_name": "Redacted for privacy",
+                "zip_code": "Redacted for privacy",
+                "country_name": "REDACTED FOR PRIVACY",
+                "email_address": "https://rdap.gname.com/extra/contact?type=admin&domain=LINEGP123.CC",
+                "phone_number": "Redacted for privacy",
+                "fax_number": "Redacted for privacy"
+            },
+            "technical_contact": {
+                "full_name": "Redacted for privacy",
+                "company_name": "Redacted for privacy",
+                "mailing_address": "Redacted for privacy",
+                "city_name": "Redacted for privacy",
+                "state_name": "Redacted for privacy",
+                "zip_code": "Redacted for privacy",
+                "country_name": "REDACTED FOR PRIVACY",
+                "email_address": "https://rdap.gname.com/extra/contact?type=technical&domain=LINEGP123.CC",
+                "phone_number": "Redacted for privacy",
+                "fax_number": "Redacted for privacy"
+            },
+            "name_servers": [
+                "aaron.ns.cloudflare.com",
+                "autumn.ns.cloudflare.com"
+            ],
+            "domain_status": [
+                "clientTransferProhibited"
+            ]
+        },
+        {
+            "num": 2,
+            "domain_name": "linegp123.cc",
+            "query_time": "2024-10-27 21:08:40",
+            "create_date": "2023-10-27",
+            "update_date": "2024-10-27",
+            "expiry_date": "2025-10-27",
+            "domain_registrar": {
+                "iana_id": 1923,
+                "registrar_name": "Beijing Lanhai Jiye Technology Co., Ltd",
+                "whois_server": "whois.kh86.cn",
+                "website_url": "http://www.ilanhai.cn",
+                "registrar_status": "Accredited"
+            },
+            "registrant_contact": {
+                "full_name": "Redacted for privacy",
+                "company_name": "Redacted for privacy",
+                "mailing_address": "Redacted for privacy",
+                "city_name": "Redacted for privacy",
+                "state_name": "ILLINOIS",
+                "zip_code": "Redacted for privacy",
+                "country_name": "United States",
+                "country_code": "US",
+                "email_address": "https://rdap.gname.com/extra/contact?type=registrant&domain=LINEGP123.CC",
+                "phone_number": "Redacted for privacy",
+                "fax_number": "Redacted for privacy"
+            },
+            "administrative_contact": {
+                "full_name": "Redacted for privacy",
+                "company_name": "Redacted for privacy",
+                "mailing_address": "Redacted for privacy",
+                "city_name": "Redacted for privacy",
+                "state_name": "Redacted for privacy",
+                "zip_code": "Redacted for privacy",
+                "country_name": "REDACTED FOR PRIVACY",
+                "email_address": "https://rdap.gname.com/extra/contact?type=admin&domain=LINEGP123.CC",
+                "phone_number": "Redacted for privacy",
+                "fax_number": "Redacted for privacy"
+            },
+            "technical_contact": {
+                "full_name": "Redacted for privacy",
+                "company_name": "Redacted for privacy",
+                "mailing_address": "Redacted for privacy",
+                "city_name": "Redacted for privacy",
+                "state_name": "Redacted for privacy",
+                "zip_code": "Redacted for privacy",
+                "country_name": "REDACTED FOR PRIVACY",
+                "email_address": "https://rdap.gname.com/extra/contact?type=technical&domain=LINEGP123.CC",
+                "phone_number": "Redacted for privacy",
+                "fax_number": "Redacted for privacy"
+            },
+            "name_servers": [
+                "expire1.gname-dns.com",
+                "expire2.gname-dns.com"
+            ],
+            "domain_status": [
+                "clientTransferProhibited"
+            ]
+        },
+        {
+            "num": 3,
+            "domain_name": "linegp123.cc",
+            "query_time": "2025-01-02 18:15:10",
+            "create_date": "2023-10-27",
+            "update_date": "2024-12-28",
+            "expiry_date": "2024-10-27",
+            "domain_registrar": {
+                "iana_id": 1923,
+                "registrar_name": "Beijing Lanhai Jiye Technology Co., Ltd",
+                "whois_server": "whois.kh86.cn",
+                "website_url": "http://www.ilanhai.cn",
+                "registrar_status": "Accredited"
+            },
+            "name_servers": [
+                "expire1.gname-dns.com",
+                "expire2.gname-dns.com"
+            ],
+            "domain_status": [
+                "clientTransferProhibited",
+                "pendingDelete"
+            ]
+        }
+    ],
+    "api_execution_time": 0.01000000000000000020816681711721685132943093776702880859375
+}
