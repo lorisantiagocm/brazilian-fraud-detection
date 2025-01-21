@@ -9,8 +9,8 @@ class CreateWhoisInformations < ActiveRecord::Migration[8.0]
       t.date :last_updated_at
       t.date :expires_at
       t.string :name_servers, default: [], array: true
-      t.string :whois_server, default: [], array: true
-      t.string :domain_statuses
+      t.string :whois_server
+      t.string :domain_statuses, default: [], array: true
       t.references :domain, null: false, foreign_key: true
 
       t.timestamps

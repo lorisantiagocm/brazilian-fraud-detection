@@ -11,21 +11,27 @@ class WhoisInformation::Fetch < Micro::Case
       return Success result: { whois_information: nil }
     end
 
-    whois_information = WhoisInformation.find_or_create_by(
-      owner_name: response.parsed_response.dig("registrant_contact", "full_name"),
-      owner_email: response.parsed_response.dig("registrant_contact", "email_address"),
-      registered_at: response.parsed_response["create_date"],
-      iana_id: response.parsed_response.dig("domain_registrar", "iana_id"),
-      owner_phone_number: response.parsed_response.dig("registrant_contact", "phone_number"),
-      last_updated_at: response.parsed_response["update_date"],
-      expires_at: response.parsed_response["expiry_date"],
-      name_servers: response.parsed_response["name_servers"],
-      whois_server: response.parsed_response["whois_server"],
-      domain_statuses: response.parsed_response["domain_status"],
-      domain_id: domain.id
-    )
+    whois_information = WhoisInformation.where(domain: domain.id).where("created_at < ?", Time.current - 2.days).first
 
-    binding.irb
+    if whois_information.nil?
+      whois_information = WhoisInformation.create(
+        owner_name: response.parsed_response.dig("registrant_contact", "full_name"),
+        owner_email: response.parsed_response.dig("registrant_contact", "email_address"),
+        registered_at: response.parsed_response["create_date"],
+        iana_id: response.parsed_response.dig("domain_registrar", "iana_id"),
+        owner_phone_number: response.parsed_response.dig("registrant_contact", "phone_number"),
+        last_updated_at: response.parsed_response["update_date"],
+        expires_at: response.parsed_response["expiry_date"],
+        name_servers: response.parsed_response["name_servers"],
+        whois_server: response.parsed_response["whois_server"],
+        domain_statuses: response.parsed_response["domain_status"],
+        domain_id: domain.id
+      )
+    end
+
+    if whois_information.nil?
+      return Failure result: { message: "Whois data could not be created: #{whois_information.errors.full_messages}" }
+    end
 
     Success result: { whois_information: whois_information }
   end

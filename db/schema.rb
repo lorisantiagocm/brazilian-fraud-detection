@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_01_15_033317) do
+ActiveRecord::Schema[8.0].define(version: 2025_01_15_043431) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -20,6 +20,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_15_033317) do
     t.integer "searched_amount", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "owner_name"
+    t.string "owner_cnpj"
+    t.datetime "trusted_at"
   end
 
   create_table "whois_informations", force: :cascade do |t|
@@ -30,9 +33,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_15_033317) do
     t.string "owner_phone_number"
     t.date "last_updated_at"
     t.date "expires_at"
-    t.string "name_servers"
+    t.string "name_servers", default: [], array: true
     t.string "whois_server"
-    t.string "domain_statuses"
+    t.string "domain_statuses", default: [], array: true
     t.bigint "domain_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
