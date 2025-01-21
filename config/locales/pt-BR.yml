@@ -1,0 +1,6 @@
+pt-BR:
+  activerecord:
+    errors:
+      messages:
+        new_domain: "O domínio é recente: criado em %{domain_creation_date}"
+        recently_updated: "O domínio foi atualizado recentemente: %{domain_update_date}"
