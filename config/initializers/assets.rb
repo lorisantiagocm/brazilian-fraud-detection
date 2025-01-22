@@ -5,3 +5,4 @@ Rails.application.config.assets.version = "1.0"
 
 # Add additional assets to the asset load path.
 # Rails.application.config.assets.paths << Emoji.images_path
+Rails.application.config.assets.precompile += %w[ popper.min.js material-dashboard.min.js bootstrap.min.js perfect-scrollbar.min.js smooth-scrollbar.min.js chartjs.min.js nucleo-icons.css material-dashboard.css?v=3.2.0 nucleo-svg.css favicon.png apple-icon.png]

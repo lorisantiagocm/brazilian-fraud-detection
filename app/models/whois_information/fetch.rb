@@ -5,15 +5,15 @@ class WhoisInformation::Fetch < Micro::Case
     domain = Domain.create_or_find_by(name: domain_name)
     return Failure result: { message: "Domain could not be created" } if domain.nil?
 
-    response = HTTParty.get("https://api.whoxy.com/?key=e0af321ba6d4965eoaea9d9d9ac2344b9&whois=#{domain_name}")
-
-    if response.body.nil? || !response.ok?
-      return Success result: { whois_information: nil }
-    end
-
     whois_information = WhoisInformation.where(domain: domain.id).where("created_at < ?", Time.current - 2.days).first
 
     if whois_information.nil?
+      response = HTTParty.get("https://api.whoxy.com/?key=e0af321ba6d4965eoaea9d9d9ac2344b9&whois=#{domain_name}")
+
+      if response.body.nil? || !response.ok?
+        return Success result: { whois_information: nil }
+      end
+
       whois_information = WhoisInformation.create(
         owner_name: response.parsed_response.dig("registrant_contact", "full_name"),
         owner_email: response.parsed_response.dig("registrant_contact", "email_address"),
@@ -33,7 +33,7 @@ class WhoisInformation::Fetch < Micro::Case
       return Failure result: { message: "Whois data could not be created: #{whois_information.errors.full_messages}" }
     end
 
-    Success result: { whois_information: whois_information }
+    Success result: { whois_information: whois_information, domain: domain }
   end
 end
 

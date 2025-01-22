@@ -1,0 +1,5 @@
+<%= form_with url: analyze_users_home_index_path, method: :post do |form| %>
+  <%= form.label :searched_url, "Search for:" %>
+  <%= form.search_field :searched_url %>
+  <%= form.submit "Search" %>
+<% end %>

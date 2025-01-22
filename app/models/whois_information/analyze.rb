@@ -5,5 +5,7 @@ class WhoisInformation::Analyze < Micro::Case
         Domain,
         Protocol,
         TopLevelDomain,
-        ThirdLevelDomain
+        ThirdLevelDomain,
+        BuildWarnings,
+        Save
 end
